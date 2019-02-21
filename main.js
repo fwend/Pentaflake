@@ -11,8 +11,8 @@
     var degrees072 = toRadians(72);
 
     /* After scaling we'll have 2 sides plus a gap occupying the length
-   of a side before scaling. The gap is the base of an isosceles triangle
-   with a base angle of 72 degrees. */
+       of a side before scaling. The gap is the base of an isosceles triangle
+       with a base angle of 72 degrees. */
     var scaleFactor = 1 / (2 + Math.cos(degrees072) * 2);
 
     var margin = 20;
@@ -40,12 +40,12 @@
             side *= scaleFactor;
 
             /* Starting at the top of the highest pentagon, calculate
-           the top vertices of the other pentagons by taking the
-           length of the scaled side plus the length of the gap. */
+               the top vertices of the other pentagons by taking the
+               length of the scaled side plus the length of the gap. */
             var distance = side + side * Math.cos(degrees072) * 2;
 
             /* The top positions form a virtual pentagon of their own,
-           so simply move from one to the other by changing direction. */
+               so simply move from one to the other by changing direction. */
             for (var j = 0; j < 5; j++) {
                 x = x + Math.cos(angle) * distance;
                 y = y - Math.sin(angle) * distance;
